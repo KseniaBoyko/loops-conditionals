@@ -20,6 +20,7 @@ public class WordGame
      char letter = (char)(Math.random() * (122 - 97 + 1) + 97);
     
     System.out.print("Type a word starting with "+letter);
+    System.out.println("If all the letters of the word are in ascending order (fore example ACE) then the base score is multiplied by 3" );
     
     Scanner scan = new Scanner(System.in);
     word = scan.nextLine();
