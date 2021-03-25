@@ -1,54 +1,35 @@
-/**
- * Auto Generated Java Class.
- */
-public class Table {
-  
-  private int width;
-  private int height;
-  private int num;
-  
-  public  Table(){
-    this.width = 6;
-    this.height = 8;
-    this.num = 1;
-  }
-  
-  public void setwidth(int width){
-    this.width = width;
-  }
-  
-  public void setheight(int height){
-    this.height = height;
-  }
-  
-  public int getwidth(){
-    return width;
-  }
-  
-  public int getheigth(){
-    return height;
-  }
-  
-  public void getNumber()
-  {
-   for (int i = 0; i < height; i++)
-        {
-            for (int j = 0; j < width; j++)
-            {
-                if(num<10)
-                {
-                System.out.print("|   "+num+ "    ");
-                num++;
-                }else{
-                System.out.print("|   "+num+ "   ");
-                num++;
-                }
-                
-            } 
-            System.out.print("|\n");
-        }
-   return;
-  }
-  
+import java.util.Scanner;
 
+public class Table {
+  int width = 4;
+  int height = 4;
+
+  public Table(int input_width, int input_height) {
+    width = input_width;
+    height = input_height;
+  }
+
+  public String getNumbers() {
+    int value = 1;
+    String table = "";
+
+    for (int i = 1; i <= height; i++) {
+      table = table + "|";
+
+      for (int j = 1; j <= width; j++) {
+
+        table = table + "  " + value;
+        if (value < 10) {
+          table = table + "  |";
+        } else {
+          table = table + " |";
+        }
+        value++;
+
+      }
+      table = table + "\n";
+    }
+    return table;
+
+  }
 }
